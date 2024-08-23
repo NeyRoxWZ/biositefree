@@ -11,7 +11,7 @@
 - 🏅 **Customizable Badges:** Show off your achievements or just add some flair with customizable badges.
 - ⭐ **FA Icon Support:** Easily integrate Font Awesome icons to enhance your bio page.
 - ❓ **Tooltips:** Hover over elements with an icon to get more details about their functionality or purpose. Tooltips provide helpful hints and explanations, ensuring a smoother user experience.
-- ✨ **Sparkling Cursor Effect:** Add a touch of magic with a sparkling effect that follows your cursor as you move it across the page. This delightful feature enhances interactivity and makes the browsing experience more engaging.
+- ✨ **Sparkling Cursor Effect:** Add a touch of magic with a sparkling effect that follows your cursor as you move it across the page. This delightful feature enhances interactivity and makes the browsing experience more engaging and custom cursor.
 <!-- Getting Started Section -->
 # 🚀 Getting Started
 Clone the Repository:
