@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="https://imgur.com/KHsmkJk.png">
+<meta property="og:title" content="https://neyrox.lol" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://neyrox.lol" />
+<meta property="og:image" content="https://imgur.com/KHsmkJk.png" />
+<meta property="og:description" content="personal private biosite" />
+<meta name="theme-color" content="#FFFFFF">
+<script>
+    const originalTitle = "ht‎ ‎ tps:/‎ /ney ‎ rox‎ .lol‎ ";
+    let index = 0;
+  
+    function animateTitle() {
+      const title = document.title;
+      if (index < originalTitle.length) {
+        document.title = title + originalTitle[index];
+        index++;
+        setTimeout(animateTitle, 250);
+      } else {
+        setTimeout(resetTitle, 1);
+      }
+    }
+  
+    function resetTitle() {
+      document.title = "";
+      index = 0;
+      setTimeout(animateTitle, 1000);
+    }
+  
+    animateTitle();
+  </script>
+</head>
+<body>
+    <div id="enter-screen">
+        <p><span style="color:#ffffff">Hi, looking for the easter egg !</span></p>
+    </div>
+    <div id="content" class="hidden">
+        <div class="profile-container">
+            <div class="badges-container">
+                <div class="badges-rectangle">
+                    <div class="badge badge-premium" data-tooltip="Owner">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <div class="badge badge-premium" data-tooltip="Premium">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                </div>
+            </div>
+            <img src="pfp.gif" alt="Profile Photo" class="profile-photo">
+            <h2 class="username">NeyRoxWZ</h2>
+            <ul class="links">
+                <li><a href="https://discord.com/users/566572805349572608" target="_blank" class="link-badge"><i class="fab fa-discord"></i><span class="tooltip">Discord</span></a></li>
+                <li><a href="https://steamcommunity.com/id/neyrox236" target="_blank" class="link-badge"><i class="fab fa-steam"></i><span class="tooltip">Steam</span></a></li>
+                <li><a href="https://github.com/NeyRoxWZ" target="_blank" class="link-badge"><i class="fa-solid fa-code"></i><span class="tooltip">GitHub</span></a></li>
+                <li><a href="https://neyrox.lol" target="_blank" class="link-badge"><i class="fa-solid fa-heart"></i><span class="tooltip">Website</span></a></li>
+                <li><a href="https://lennyportefolio.systeme.io" target="_blank" class="link-badge"><i class="fa-solid fa-folder"></i><span class="tooltip">Portfolio</span></a></li>
+            </ul>
+            <hr />
+            <div class="typewriter">
+                <p id="typewriter-text"></p>
+            </div>
+        </div>
+    </div>
+    <video autoplay muted loop id="background-video">
+        <source src="background.mp4" type="video/mp4">
+    </video>
+    <audio id="background-music" loop>
+        <source src="background.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="screamer-sound">
+        <source src="screamer.mp3" type="audio/mpeg">
+    </audio>
+    <div id="screamer-image" class="hidden">
+        <img src="screamer.png" alt="Screamer">
+    </div>
+    <button id="toggle-music" class="hidden"><i class="fa-solid fa-pause"></i></button>
+    <script src="script.js"></script>
+</body>
+</html>

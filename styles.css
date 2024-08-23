@@ -1,0 +1,289 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    height: 100%;
+}
+
+#enter-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 34px;
+    cursor: pointer;
+    text-align: center;
+    z-index: 2;
+    transition: opacity 0.2s ease;
+}
+
+#enter-screen.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 40px 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    color: white;
+    width: 80%;
+    max-width: 600px;
+    border: 2px solid white;
+    z-index: 3;
+    overflow-wrap: break-word; /* Allow text to wrap */
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.username {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.links {
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Ensure items wrap if too wide */
+    justify-content: center;
+}
+
+.links li {
+    position: relative;
+    margin: 0 10px;
+}
+
+.links a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    position: relative;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+    color: #fff;
+}
+
+.links a:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.badges-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.badges-rectangle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    border: 1px solid #fff; /* Contour blanc */
+}
+
+.badge {
+    position: relative;
+    font-size: 24px; /* Ajustez selon vos besoins */
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0); /* Fond des badges */
+    color: #fff; /* Couleur des icônes */
+}
+
+.badge:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%; /* Positionne le tooltip au-dessus du badge */
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(45deg, 
+    #00f,         /* Bleu */
+    #00aaff,      /* Bleu clair */
+    #00ffaa,      /* Vert clair */
+    #aaff00,      /* Vert vif */
+    #aaffaa,      /* Vert pastel */
+    #aa00ff,      /* Violet vif */
+    #ff00aa,      /* Rose vif */
+    #ff007f,      /* Rose profond */
+    #ff5c00,      /* Orange vif */
+    #ffaa00,      /* Jaune vif */
+    #aaff00,      /* Vert vif (répété pour un effet de transition) */
+    #00ffaa       /* Vert clair (répété pour fermer la boucle) */
+  );
+   
+    background-size: 200% 200%;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+    animation: gradientAnimation 3s linear infinite; /* Animation du dégradé */
+}
+
+.badge:hover::after {
+    opacity: 1;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.profile-photo {
+    width: 130px; /* Ajustez selon vos besoins */
+    height: 130px; /* Ajustez selon vos besoins */
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.8), 0 0 16px rgba(0, 255, 255, 0.6);
+}
+
+.typewriter p {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    border-right: .15em solid orange;
+    animation: blink-caret .75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: blur(8px);
+}
+
+#toggle-music {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+}
+
+#toggle-music.show {
+    opacity: 1; /* Affiché lorsqu'il a la classe "show" */
+}
+
+#toggle-music i {
+    font-size: 24px;
+    transition: color 0.3s ease-in-out;
+}
+
+#toggle-music:hover {
+    background-color: #555;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.8), 0 0 16px rgba(0, 255, 255, 0.6);
+}
+
+
+#screamer-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+    display: none; /* Caché par défaut */
+}
+
+#screamer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Ajoutez la classe 'hidden' pour cacher l'image par défaut */
+.hidden {
+    display: none;
+}
+
+hr {
+    width: 50%; /* Réduit la largeur de la ligne */
+    border: 1px solid #fff; /* Style de la ligne */
+    margin: 20px auto; /* Espacement autour de la ligne */
+}
