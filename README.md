@@ -1,16 +1,17 @@
 # 🌱 Bio Website - Fully Customizable & Open Source 🌱
 **Welcome to the Bio Website project, a sleek, minimalist, and completely customizable bio link page. Whether you're a developer, a creator, or someone who just loves personalizing their online presence, this project is made for you. It's easy to use, modify, and make your own.**
 <!-- Features Section -->
-- ✨ Features
-- 🎉 Easter Egg: Discover a hidden surprise by holding down the spacebar!
-- ✏️ Easy Name Change: Change your display name effortlessly with just a few tweaks.
-- ⚙️ Fully Customizable: Everything from the background to the sound effects is customizable. Dive into the code and make it yours.
-- 🌫️ Blurred Background: Enjoy a modern, blurred background for a clean and stylish look.
-- 🔊 Custom Sounds & Backgrounds: Personalize your site with your own sounds and backgrounds to create a unique vibe.
-- 📂 Separated Files for Clean Code: The project structure is neat and organized with style.css, index.html, and script.js files separated for easy modification.
-- 🏅 Customizable Badges: Show off your achievements or just add some flair with customizable badges.
-- ⭐ FA Icon Support: Easily integrate Font Awesome icons to enhance your bio page.
-- ❓ Tooltips: Hover over elements with an icon to get more details about their functionality or purpose. Tooltips provide helpful hints and explanations, ensuring a smoother user experience.
+# ✨ Features
+- 🎉 **Easter Egg:** Discover a hidden surprise by holding down the spacebar!
+- ✏️ **Easy Name Change:** Change your display name effortlessly with just a few tweaks.
+- ⚙️ **Fully Customizable:** Everything from the background to the sound effects is customizable. Dive into the code and make it yours.
+- 🌫️ **Blurred Background:** Enjoy a modern, blurred background for a clean and stylish look.
+- 🔊 **Custom Sounds & Backgrounds:** Personalize your site with your own sounds and backgrounds to create a unique vibe.
+- 📂 **Separated Files for Clean Code:** The project structure is neat and organized with style.css, index.html, and script.js files separated for easy modification.
+- 🏅 **Customizable Badges:** Show off your achievements or just add some flair with customizable badges.
+- ⭐ **FA Icon Support:** Easily integrate Font Awesome icons to enhance your bio page.
+- ❓ **Tooltips:** Hover over elements with an icon to get more details about their functionality or purpose. Tooltips provide helpful hints and explanations, ensuring a smoother user experience.
+- ✨ **Sparkling Cursor Effect:** Add a touch of magic with a sparkling effect that follows your cursor as you move it across the page. This delightful feature enhances interactivity and makes the browsing experience more engaging.
 <!-- Getting Started Section -->
 # 🚀 Getting Started
 Clone the Repository:
